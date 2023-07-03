@@ -37,6 +37,9 @@ namespace ConsoleApp1
             {
                 get { return Centimeter * ONE_INCH; }
                 private set { Centimeter = (int)(value / ONE_INCH); }
+                
+            //  { 2023. 07. 03.         Add private _SetInch function / Gamma 
+                private set { this._SetInch(value); }
             }
 
             public Ruler(int cmValue)
@@ -48,6 +51,10 @@ namespace ConsoleApp1
             {
                 Console.WriteLine($"{this.Centimeter}cm 는 {this.Inch}inch 입니다.");
             }
+
+            private void _SetInch(float inchValue) { Centimeter = (int)(inchValue / ONE_INCH); }
+            //  { 2023. 07. 03.         Add private _SetInch function / Gamma 
+
         }
-    }
+
 }
