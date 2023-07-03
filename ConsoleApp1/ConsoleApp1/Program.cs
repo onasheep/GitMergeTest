@@ -9,9 +9,9 @@ namespace ConsoleApp1
     // {   2023, 07 , 03. Modified class position / Alpha
 
     internal class Program
-    {   
-        
-        
+    {
+
+
         static void Main(string[] args)
         {
             // { 2023. 07. 03. Add user input / Beta 
@@ -36,9 +36,8 @@ namespace ConsoleApp1
             public float Inch
             {
                 get { return Centimeter * ONE_INCH; }
-                private set { Centimeter = (int)(value / ONE_INCH); }
-                
-            //  { 2023. 07. 03.         Add private _SetInch function / Gamma 
+
+                //  { 2023. 07. 03.         Add private _SetInch function / Gamma 
                 private set { this._SetInch(value); }
             }
 
@@ -56,5 +55,5 @@ namespace ConsoleApp1
             //  { 2023. 07. 03.         Add private _SetInch function / Gamma 
 
         }
-
+    }
 }
